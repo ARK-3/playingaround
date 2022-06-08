@@ -1,0 +1,59 @@
+from math import ceil
+x = [] #13 = 4 , 4 = 1
+
+inputs_lengths = int(input("how many numbers u got?: "))
+for i in range(0,inputs_lengths):
+    inputted_numbers = int(input("Enter a number: "))
+    x.append(inputted_numbers)
+f = 1
+y = -(len(x))
+print("list before sotring: ", x)
+many_times_repetition_needed = len(x)/4
+# print(ceil(many_times_repetition_needed))
+for f in range(0,ceil(many_times_repetition_needed)):
+    n = 0
+    i = 0
+    for i in range(0, len(x)):
+        if n < len(x) - 1:
+            n = i + 1
+            print("n:", n)
+            print("i:", i)
+        if x[i] != x[n]:
+            if x[i] < x[n]:
+                c = x[i]
+                x.pop(i)
+                x.insert(n, c)  # list.insert(position, element)
+                print("first if", x)
+            # elif n < len(x) - 1 and i <= len(x) - 1:
+            #     n += 1
+            #     print("first elif", x)
+
+    i = 0
+    n = 0
+    for i in range(y + 1, 0):
+
+        if n > y:
+            n = i - 1
+        # print("n:", n)
+        # print("i:", i)
+        if x[i] > x[n]:
+            c = x[i]
+            x.pop(i)
+            x.insert(n, c)  # list.insert(position, element)
+            # print(x)
+            print("sec if", x)
+
+        elif n < len(x) - 1 and i <= len(x) - 1:
+            n += 1
+            print("sec elif", x)
+
+    print("list after sorting: ", x)
+    f += 1
+
+
+
+
+
+
+
+
