@@ -16,14 +16,14 @@ for f in range(0,ceil(many_times_repetition_needed)):
     for i in range(0, len(x)):
         if n < len(x) - 1:
             n = i + 1
-            print("n:", n)
-            print("i:", i)
+            #print("n:", n)
+            #print("i:", i)
         if x[i] != x[n]:
             if x[i] < x[n]:
                 c = x[i]
                 x.pop(i)
                 x.insert(n, c)  # list.insert(position, element)
-                print("first if", x)
+                #print("first if", x)
             # elif n < len(x) - 1 and i <= len(x) - 1:
             #     n += 1
             #     print("first elif", x)
@@ -41,11 +41,11 @@ for f in range(0,ceil(many_times_repetition_needed)):
             x.pop(i)
             x.insert(n, c)  # list.insert(position, element)
             # print(x)
-            print("sec if", x)
+            #print("sec if", x)
 
         elif n < len(x) - 1 and i <= len(x) - 1:
             n += 1
-            print("sec elif", x)
+            #print("sec elif", x)
 
     print("list after sorting: ", x)
     f += 1
