@@ -1,5 +1,5 @@
 from math import ceil
-x = [] #13 = 4 , 4 = 1
+x = [] 
 
 inputs_lengths = int(input("how many numbers u got?: "))
 for i in range(0,inputs_lengths):
