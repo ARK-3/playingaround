@@ -49,11 +49,3 @@ for f in range(0,ceil(many_times_repetition_needed)):
 
     print("list after sorting: ", x)
     f += 1
-
-
-
-
-
-
-
-
